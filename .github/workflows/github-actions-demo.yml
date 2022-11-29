@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest #Each job runs in an virtual environment
     steps:
       - run: echo "Installing node version 16.15.0"
-      - run: apt install nodejs
+      - run: sudo apt install nodejs
       - run: echo "Installed node version 16.15.0"
       - run: npm install
       - run: echo "Installed modules"
