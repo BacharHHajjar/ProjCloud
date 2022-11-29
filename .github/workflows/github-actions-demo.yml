@@ -5,13 +5,11 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest #Each job runs in an virtual environment
     steps:
-      - run: echo "Installing node version 16.15.0"
-      - run: sudo apt install nodejs
-      - run: echo "Installed node version 16.15.0"
-      - run: sudo npm install
-      - run: echo "Installed modules"
-      - run: npm run build
-      - run: echo "Built project"
-      - run: npm run start
-      - run: echo "Started Server"
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci
+      - run: npm test
+
 
