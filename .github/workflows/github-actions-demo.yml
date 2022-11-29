@@ -8,7 +8,7 @@ jobs:
       - run: echo "Installing node version 16.15.0"
       - run: sudo apt install nodejs
       - run: echo "Installed node version 16.15.0"
-      - run: npm install
+      - run: sudo npm install
       - run: echo "Installed modules"
       - run: npm run build
       - run: echo "Built project"
