@@ -35,9 +35,9 @@ app.get("/*",async(req,res)=>{
   res.status(404).send({Error:404});
 })
 
-app.listen(8000,() =>{console.log("Server Onn")});
+const variable = app.listen(8000,() =>{console.log("Server Onn")});
 
-export default app;
+export default variable;
 
 
 // export const helloWorld = (): string => {
