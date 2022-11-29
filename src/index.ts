@@ -35,7 +35,7 @@ app.get("/*",async(req,res)=>{
   res.status(404).send({Error:404});
 })
 
-app.listen(8000,() =>{console.log("Server On")});
+app.listen(8000,() =>{console.log("Server Onn")});
 
 export default app;
 
