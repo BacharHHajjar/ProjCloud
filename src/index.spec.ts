@@ -1,8 +1,19 @@
-import { helloWorld } from './index';
+import app  from './index';
+import request from 'supertest'
 
-describe('typeScript test suite', () => {
-  it('should return "Hello world!"', () => {
-    expect.assertions(1);
-    expect(helloWorld()).toBe('Hello world!');
+jest.setTimeout(19000);
+describe('typeScript test suite',  () => {
+  it('should return error 404', async() => {
+    const req = await request(app).get('/a')
+    expect (req.statusCode).toBe(404)
+
   });
+
+  it('should return successs code ', async() => {
+    const req = await request(app).get('/api/v1/sysinfo')
+    expect (req.statusCode).toBe(200)
+
+  });
+
+  //TODO: add more tests
 });
